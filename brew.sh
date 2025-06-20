@@ -79,7 +79,6 @@ brew install \
     wget \
     xz \
     yarn \
-    youtube-dl \
     yq \
     zsh-syntax-highlighting
 
@@ -132,6 +131,81 @@ brew install --cask \
 
 echo "🧹 Cleaning up..."
 brew cleanup
+
+echo "⚙️ Configuring macOS system preferences..."
+
+# Turn off natural scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Show hidden files in Finder
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Show file extensions in Finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Set Dock to auto-hide
+defaults write com.apple.dock autohide -bool true
+
+# Speed up Dock animations
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+
+# Remove Dock auto-hide delay
+defaults write com.apple.dock autohide-delay -float 0
+
+# Show battery percentage in menu bar
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Disable "natural" (Lion-style) scrolling for trackpad
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Increase trackpad tracking speed
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 2.5
+
+# Enable three finger drag
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable automatic capitalization
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable smart dashes
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disable automatic period substitution
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Disable smart quotes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Enable full keyboard access for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Set screenshot format to PNG
+defaults write com.apple.screencapture type -string "png"
+
+# Save screenshots to Desktop
+defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+
+# Disable shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
+echo "🔄 Restarting affected applications..."
+killall Finder
+killall Dock
+killall SystemUIServer
 
 echo "✅ Homebrew setup complete!"
 echo ""
