@@ -281,9 +281,6 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-# Disable local Time Machine snapshots
-sudo tmutil disablelocal
-
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
