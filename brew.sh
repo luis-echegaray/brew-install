@@ -22,6 +22,9 @@ else
     brew update
 fi
 
+echo "📦 Adding custom taps..."
+brew tap common-fate/granted
+
 echo "📦 Installing formulae..."
 brew install \
     act \
