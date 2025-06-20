@@ -293,11 +293,6 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 # Don't show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
-# Enable the Develop menu and the Web Inspector in Safari
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
@@ -314,6 +309,7 @@ echo "- For NVM, add this to your ~/.zshrc: export NVM_DIR=\"\$HOME/.nvm\" && [ 
 echo "- For pyenv, add this to your ~/.zshrc: export PATH=\"\$HOME/.pyenv/bin:\$PATH\" && eval \"\$(pyenv init --path)\" && eval \"\$(pyenv init -)\""
 echo "- Consider configuring starship prompt: echo 'eval \"\$(starship init zsh)\"' >> ~/.zshrc"
 echo "- Set up fzf key bindings: \$(brew --prefix)/opt/fzf/install"
+echo "- To enable Safari Developer tools: Safari > Settings > Advanced > Show Develop menu"
 echo "- Some applications may require additional configuration"
 echo ""
 echo "🚀 Recommended post-install actions:"
