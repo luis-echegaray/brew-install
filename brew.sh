@@ -120,6 +120,7 @@ brew install --cask \
     maccy \
     microsoft-remote-desktop \
     obs \
+    rectangle \
     session-manager-plugin \
     slack \
     tailscale \
