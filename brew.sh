@@ -121,7 +121,6 @@ brew install --cask \
     ghostty \
     google-chrome \
     google-drive \
-    iterm2 \
     kap \
     maccy \
     microsoft-remote-desktop \
