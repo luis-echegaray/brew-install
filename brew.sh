@@ -71,6 +71,7 @@ brew install \
     openssl@3 \
     readline \
     shellcheck \
+    starship \
     sqlite \
     talosctl \
     tree-sitter \
@@ -80,6 +81,7 @@ brew install \
     xz \
     yarn \
     yq \
+    zsh-autocomplete \
     zsh-syntax-highlighting
 
 # Optional: Install additional useful tools
