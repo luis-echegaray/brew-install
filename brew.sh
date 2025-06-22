@@ -46,7 +46,7 @@ brew install \
     docker-compose \
     eksctl \
     ffmpeg \
-    flux \
+    fluxcd/tap/flux \
     gettext \
     gh \
     git \
