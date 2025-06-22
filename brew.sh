@@ -51,6 +51,7 @@ brew install \
     gh \
     git \
     git-delta \
+    gnupg \
     go \
     granted \
     helm \
