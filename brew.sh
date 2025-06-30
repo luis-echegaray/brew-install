@@ -24,6 +24,7 @@ fi
 
 echo "📦 Adding custom taps..."
 brew tap common-fate/granted
+brew tap TylerBrock/saw
 
 echo "📦 Installing formulae..."
 brew install \
@@ -71,6 +72,7 @@ brew install \
     nvm \
     openssl@3 \
     readline \
+    saw \
     shellcheck \
     sops \
     starship \
